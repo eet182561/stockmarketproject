@@ -1,0 +1,298 @@
+\documentclass[12pt]{Book}
+
+\makeatletter
+\def\endthebibliography{%
+  \def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+  \endlist
+}
+\makeatother
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{array}
+\title{Stock Market Project}
+\author{Abhishek Bohra}
+\date{September 2020}
+
+\begin{document}
+\nocite{*}
+    \maketitle
+\chapter{Introduction}
+	\section{What I've planned}
+	This document is a plan/outline of the project: Stock Market Project. It has chapters and sections and details about them. The document can be referred later in case I abandon this long project and would like to revive it. It can also be used to transfer the technology to someone concerned with the project.
+		This project is all about making profits from the share market. There are various approaches for algorithmic trading and other things. I will be building and analysing markets from scratch and using some techniques learned in IIT Delhi.
+		There is also some material share by Rehman Sir, which uses fractal analysis.
+\chapter{Finding the relationship between shares}
+	This is inspired by Aghil Sabu's Project in social network analysis. I'll be doing something similar but my own way.
+	\section{Searching for Indian Stock Exchange Data}
+		First things first, lets look for the database online. Fortunately, Kaggle has Nifty-50 Market 2000-2020 database. It might be useful as it is not that old. The database looks as follows:
+		\begin{itemize}
+		\item The Database is divided into many files with every file containing data of particular stock.
+		\item The data set has following columns
+			\begin{enumerate}
+			\item Previous close : meh! redundant column. Will surely drop it. \textbf{Useless}
+			\item Open : The opening price of the day. \textbf{Useful}
+			\item High : The Highest price on the day. \textbf{Might be Useful}
+			\item Low : The Lowest price on the day.	\textbf{Useful}
+			\item Last : 
+			\item Close : The closing price of the day.	\textbf{Useful}
+			\item VWAP : Volume Weighted Average Price \textbf{Useful}
+			\item volume: Not known yest
+			\item Turnover : Blah blah
+			\item Deliverable Volume: Not known 
+			\item \%Deliverable: This too now known
+			\end{enumerate}
+		\end{itemize}
+	\section{Formatting the data}
+	After 5 minutes of brainstorming and correlation in hindsight, I need need the following two set of 
+matrices.
+	
+	\[\begin{bmatrix}
+	a_{11}&a_{12}&\cdots &a_{1n} \\
+	a_{21}&a_{22}&\cdots &a_{2n} \\
+	\vdots & \vdots & \ddots & \vdots\\
+	a_{n1}&a_{n2}&\cdots &a_{nn}
+	\end{bmatrix}\]	
+    \section{Challenges faced in sending voice over IP}
+    Adding voice over IP introduces many challenges as discussed in the introduction.
+    \subsection{Interoperability}
+    Interoperability means "the ability of computer systems or software to exchange and make use of information". When two or more entities in separate communicating systems are integrated and need to interact with each other to perform a specific task, the capability to operate as desired is called interoperability, which is considered an essential aspect of the correctness of integrated systems. However, products from different vendors or even from the same vendor often do not interoperate properly. Two leading causes of non-interoperation are the ambiguity of protocol specification and vendor’s proprietary extensions. Interoperability testing is to check the interoperations among integrated system implementations.\par
+    As we have a lot of circuit switched traditional telephony into the system. Introduction to VoIP into system has to deal with conversion of data packets into continuous stream of voice stream for circuit switched network. 
+    \subsection{Packet Loss}
+    As packet loss is quite common in digital networks, here any form of loss may lead to loss of quality of audio or speech, because even re transmission of erroneous packet will be useless if it does not reach in time.
+    \subsection{Delay}
+    It is natural to face some delay in packet switched network. Although the bandwidth may be high but since the network is accessed with a lot of system at same time, a delay is usual. A delay may not be degrading faction in data transmission but in voice communication, when two users are waiting for the response, delay might be crucial. 
+    \subsection{Scalability}
+    As researchers are working to provide the same quality over IP as normal telephone calls but at a much lower cost,
+    so there is a great potential for high growth rates in VOIP systems. VOIP systems needs to be flexible enough to
+    grow to large user market and allow a mix of private and public services.
+    \subsection{Reliability}
+    Since the internet is susceptible to packet losses, reliability will prove to be an issue while transmitting voice over such channel.
+    \subsection{Quality}
+    Consider all the challenges discussed above and below, there will be challenge to achieve as good quality as you get in PSTN network. As IP was designed for carrying data, so it does not provide real time guarantees but only provides best effort
+    service. 
+    \subsection{Integration with PSTN}
+    While Internet telephony is being introduced, it will need to work in conjunction with PSTN for a few years. We
+    need to make the PSTN and IP telephony network appear as a single network to the users of this service.
+    While Internet telephony is being introduced, it will need to work in conjunction with PSTN for a few years. We
+    need to make the PSTN and IP telephony network appear as a single network to the users of this service.
+    \section{Basic IP Telephone System}
+    An IP Telephone can be a computer equipped with audio hardware and special software, or it can
+be a separate specialized hardware unit. The simplest IP telephone system uses two basic
+components:
+\begin{itemize}
+\item IP Telephone: IP Telephone is the end device which allows humans to place and receive
+calls.
+
+\item Media Gateway Controller: Media Gateway Controller provides overall control and
+coordination between IP phones. It also allows a caller to locate a Callee e.g call forwarding
+
+\end{itemize}
+
+\subsection{Inter-Operation with Other Telephone Systems}
+IP telephone system needs to interoperate with Public Switched Telephone Network (PSTN) or
+another IP telephone system. Two additional components needed for such incorporation:
+\begin{itemize}
+\item Media Gateway: A Media Gateway provides translation between different audio formats. A Media Gateway Controller coordinates media and signaling gateways.
+\item Signaling Gateway: A Signaling Gateway translates between different signaling protocols.
+\end{itemize}
+ 
+
+    \section{Applications}
+    Most of us are yet to realize that the amount of time we already use Voice over Internet
+Protocol (VoIP). It’s something many of us use every day. Every time you use your Mac or
+Windows computer to call someone using the internet, you are using VoIP. For instance,
+when you use Skype or Facebook Messenger, these are VoIP applications.
+    \subsection{Voice calls from a mobile PC via the Internet}
+    Businesses continue to ditch landlines and mobile services (along with their bills).
+Instead, they use the Internet to make calls, i.e., VoIP, as it’s more efficient, high in
+quality, and cost-effective. Especially, when needing to make low-cost international
+calls. A VoIP business phone system uses the cloud. It provides employees 	 	
+flexibility and mobility, no matter their location. Employees can make business 	 	
+phone calls using VoIP while on go. They can choose to use their mobile phone, 		
+laptop, desktop computer, or tablet. Whether you use Android or Apple, does not
+matter either. As long as an internet connection is available, businesses can 	 	
+communicate using VoIP.
+    \subsection{Remote access from branch office}
+    Small offices could gain access to corporate voice, data and fax services using 	 	
+company’s intranet. For example, a bank that wants to reduce a costs and 	 	
+combine traffic to provide voice and data access to the main office.
+    \subsection{PSTN Gateways}
+    Interconnection of the internet to the PSTN can be accomplished using a gateway either
+integrated into a PBX or provided. For e.g, PC based telephone accessing a public 	 	
+network by calling a gateway at a point close to the destination to minimise long distance
+charges.
+    \subsection{Internet aware Telephones}
+    Enhancement of ordinary telephones to serve as an Internet access device as well
+as ordinary telephony, using VoIP technology. Directory services could be 	 	
+accomplished via the Internet. The telephone can be used to query data base for
+any information, including any membership details to communication companies.
+    \subsection{Internet call centre access}
+    Access to all centre facilities via the internet is emerging as a valuable adjunct to
+electronic commerce application. Internet call centre access would enable a 	 	
+customer who has questions about a product being offered over the internet to 	 	
+access customer service agents online. VoIP can be further be used to 	 	 	
+interconnect different call centres, thereby coordinating the work between them.
+    
+    \section{H.323 standard}
+    This standard was first developed to carry multimedia conferencing over lans but then it was extended to carry voice over internet protocol. This is ITU-T's standard that manufacturers should comply to while providing VoIP service. It assumes that no Quality of service is provided by Lans but recent IEEE802.11 protocols provide QoS. Since multiple vendors follow this standard it solves interoperability. The standard deals with both point to point and multipoint.
+    \subsection{Components of H.323}
+    It has the following components:
+    \subsubsection{Terminals}
+    These are the LAN client endpoints that provide real time, two way communications. It uses Registration Admission Status to interact with the Gatekeeper. Real Time Transport Protocol is used to carry voice packets. Q.931 is required for call signalling and setting up call. It also may use for T1.120 video conferencing protocol, video codecs and support for Multipoint control units (MCU).
+    \subsubsection{Gateways}
+    It is also an endpoint on the network which provides for real-time, two-way communications between H.323
+terminals on the IP network and other ITU terminals on a switched based network, or to another H.323 gateway. The basically perform conversion of various transmission formats so that they are compatible. They are also capable of converting various codecs. Gateways are the interface between PSTN and the internet.They take voice from circuit switched PSTN and place it on the public Internet and
+vice versa. Gateways are optional in that terminals in a single LAN can communicate with each other directly. When the terminals on a network need to communicate with an endpoint in some other network, then they communicate via
+gateways.
+    \subsubsection{Gatekeepers}
+    It is one of the most important components of H.323 system. It basically acts as the manager. It acts as the central point
+for all calls within its zone (A zone is the aggregation of the gatekeeper and the endpoints registered with it) and provides
+services to the registered endpoints. Functionalities of Gatekeepers are Address Translation Admission Control, Call signalling, Call Authorization, Bandwidth Management and Call Management.
+    \subsubsection{Multipoint Control Units(MCU)}
+    The MCU is an endpoint on the network that provides the capability for three or more terminals and gateways to
+participate in a multipoint conference. The MCU consists of a mandatory Multipoint Controller (MC) and optional
+Multipoint Processors (MP). The MC determines the common capabilities of the terminals by using H.245 but it does not
+perform the multiplexing of audio, video and data. The multiplexing of media streams is handled by the MP under the
+control of the MC.
+
+\pagebreak
+    \subsection{Protocol Stack}
+    
+    \section{Session Initiation Protocol}
+    It is an application layer control protocol for creating, modifying and terminating sessions with one or
+    more participants. The architecture of SIP is similar to that of HTTP (client-server protocol). Requests are
+    generated by the client and sent to the server. The server processes the requests and then sends a
+    response to the client. A request and the responses for that request make a transaction. SIP has INVITE
+    and ACK messages which define the process of opening a reliable channel over which call control
+    messages may be passed. SIP makes minimal assumptions about the underlying transport protocol. SIP
+    depends on the Session Description Protocol (SDP) for carrying out the negotiation for codec
+    identification. SIP supports session descriptions that allow participants to agree on a set of compatible
+    media types. SIP also supports user mobility by proxying and redirecting requests to the user’s current
+    location. The services thatSIP provide include
+    \begin{itemize}
+        \item Determination of the end system to be used for communication
+        \item Ringing and establishing call parameters at both called and calling party
+        \item Determination of the willingness of the called party to engage in communications
+        \item Determination of the media and media parameters to be used
+        \item The transfer and termination of calls
+    \end{itemize}
+    
+    \subsection{An example SIP session}
+    \begin{itemize}
+        \item User agent A contacts DNS
+    server to map domain name in
+    SIP request to IP address.
+        \item User agent A sends a INVITE
+    message to proxy server that
+    uses location server to find the
+    location of user agent B.
+        \item Call is established between A
+    and B. Then media session
+    begins.
+        \item Finally, B terminates the call
+    by sending a BYE request.
+    \end{itemize}
+    
+    \newpage
+    \subsection{Components of SIP}
+    There are mainly two components in SIP
+    \subsubsection{User Agents}
+    A user agent is an end system acting on behalf of a user. There are two parts to it: a client and a
+    server. The client portion is called the User Agent Client (UAC) which is used to initiate SIP
+    request while the server portion is called User Agent Server (UAS) which is used to receive
+    requests and return responses on behalf of the user.
+    \subsubsection{Network Servers}
+    There are 3 types of servers within a network. A registration server receives updates concerning
+    the current locations of users. A proxy server on receiving requests, forwards them to the nexthop server, which has more information about the location of the called party. A redirect server
+    on receiving requests, determines the next-hop server and returns the address of the next-hop
+    server to the client instead of forwarding the request.
+    \section{SIP Messages}
+    SIP defines a lot of messages. These messages are used for communicating between the client and the
+    SIP server.
+    \subsection{INVITE} for inviting a user to a call
+    \subsection{BYE}for terminating a connection between the two end points
+    \subsection{ACK}for reliable exchange of invitation messages
+    \subsection{Ring} to play the ringing sound.
+    \subsection{OPTIONS}for getting information about the capabilities of a call
+    \subsection{REGISTER}gives information about the location of a user to the SIP registration server
+    \subsection{CANCEL}for terminating the search for a user
+    \section{SIP Operation}
+    Callers and callees are identified by SIP addresses. When making a SIP call, a caller first needs to locate
+    the appropriate server and send it a request. The caller can either directly reach the callee or indirectly
+    through the redirect servers. The Call ID field in the SIP message header uniquely identifies the calls.
+    \subsection{SIP Addressing}
+    The SIP hosts are identified by a SIP URL which is of the form sip:username@host. A SIP address can
+    either designate an individual or a whole group.
+    \subsection{Locating a SIP server}
+    The client can either send the request to a SIP proxy server or it can send it directly to the IP address and
+    port corresponding to the Uniform Request Identifier (URI).
+    \subsection{SIP Transaction}
+    Once the host part of the Request URI has been resolved to a SIP server, the client can send requests to
+    that server. A request together with the responses triggered by that request make up a SIP transaction.
+    The requests can be sent through reliable TCP or through unreliable UDP.
+    \subsection{SIP Invitation}
+    A successful SIP invitation consists of two requests: a INVITE followed by ACK. The INVITE request asks
+    the callee to join a particular conference or establish a two party conversation. After the callee has
+    agreed to participate in the call, the caller confirms that it has received that response by sending an ACK
+    request. The INVITE request contains a session description that provides the called party with enough
+    information to join the session. If the callee wishes to accept the call, it responds to the invitation by
+    returning a similar session description.
+    \subsection{Locating a User}
+    A callee may keep changing its position with time. These locations can be dynamically registered with
+    the SIP server. When the SIP server is queried about the location of a callee, it returns a list of possible
+    locations. A Location Server in the SIP system actually generates the list and passes it to the SIP server.
+    \subsection{Changing an Existing Session}
+    Sometimes we may need to change the parameters of an existing session. This is done by re-issuing the
+    INVITE message using the same Call ID but a new body to convey the new information.
+    \section{Comparison of SIP with H.323}
+    H.323 and SIP are specifically known for the IP signalling standards. The H.323 and SIP describe multimedia communication systems and protocols. These protocol suites differ in many ways. Essentially, H.323 is derived by ITU before the advent of SIP while SIP is acknowledged by IETF standard.
+    \newpage
+    \begin{center}
+    \begin{tabular}{||m{8em}| m{10em} m{10em}||}
+    \hline
+    \hline
+    Basis for comparison & H.323 & SIP \\ [0.5ex]
+    \hline
+    Origins	& Telephony based	& Internet-based \\
+    \hline
+Designed by &	ITU (International Telecommunication Union)	& IETF (Internet Engineering Task Force)\\ [2ex]
+	\hline
+	Endpoint location &	Utilizes alias (which is mapped by gatekeepers). &	Uses SIP URLs.\\
+	\hline
+	Call routing	& The gatekeeper provides the routing information.	& Redirect and location server provides routing information \\
+	\hline
+Message Format &	Binary &	ASCII\\
+\hline
+Compatibility with Internet	& No & 	Yes\\
+\hline
+Architecture &	Monolithic &	Modular\\
+\hline
+Instant messaging &	Not provided &	Provides instant messaging facility\\
+\hline
+Scalability &	Limited &	Better\\
+\hline
+Flexibility &	H.323 is not flexible enough. &	Highly flexible.\\
+\hline
+Interoperability &	Well defined protocols and complete backward compatibility makes it interoperable. &	Does not provide interoperability. \\
+\hline
+Ease of implementation &	Need of special parser complicate the deployment and debugging. &	Reusable elements easily conduct the implementation.\\
+\hline
+Complexity &	Quite complex &	Moderate	\\
+    \hline    
+    \hline
+    \end{tabular}
+    \end{center}
+    \newpage\phantom{blabla}
+    \newpage\phantom{blabla}
+    \section{summary}
+    We discussed the classical telephony, and two standards used in VoIP. The main difference is that H.323 standard is older and was much widely used but because it is difficult to scale, SIP is not being used widely. You can even try to get your own sip number from Skype.
+    \newline
+Over the last twenty years, VoIP has provided businesses around the world with the convenience of increased mobility, due to constant development and emerging cutting-edge technologies. The usage of VoIP as a service has grown rapidly – between 1998 and 2002, VoIP carried only 1-3\% of all voice calls worldwide, but in 2005, VoIP was responsible for more than 200 billion call minutes.
+ The quality of VoIP services are expected to increase significantly with the development of fifth-generation (5G) wide-area wireless networks, enabling faster communication speeds and response rates, simultaneously eliminating problems such as call jitter and packet loss. A greater concern for increasing use of VoIP lies with the security of calls. Recently we have seen cloud calling services like ZOOM meetings getting hijacked. Since VoIP has become standard of many businesses, security is the main issue.
+\bibliographystyle{ieeetran}
+\bibliography{refer}
+\end{document}
